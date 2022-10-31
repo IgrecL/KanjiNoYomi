@@ -6,9 +6,12 @@ def start():
     # custom kanji mode
     if varList[6].get():
         file = open(str(os.path.dirname(__file__))+'/custom.txt')
+        customKanji = file.readlines()[0]
+        file = open(str(os.path.dirname(__file__))+'/kanji.txt')    
         for line in file.readlines():
             split = line.split('|')
-            kanjiList.append(line.split('|'))
+            if split[0] in customKanji:
+                kanjiList.append(line.split('|'))
     # normal mode
     else:
         # add selected JLPT levels
