@@ -1,5 +1,7 @@
 # 漢字の読み
 
+Only works on Linux.
+
 You can choose which JLPT levels you want to train during the session.<br>
 The cards on which you fail are returned to the deck.<br>
 The session ends when there are no cards left.
