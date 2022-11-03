@@ -70,7 +70,7 @@ def nextKanji():
     furiganaLabel.configure(text='')
     kanjiLabel.configure(text=kanji[0])
     inputField.delete(0,END)
-    progresslabel.configure(text=str(kanjiGoal-len(kanjiList))+'/'+str(kanjiGoal)+'    ')
+    progresslabel.configure(text=str(kanjiGoal-len(kanjiList))+'/'+str(kanjiGoal)+'   ')
     window.update()
 
 # global variables
@@ -81,7 +81,7 @@ kanjiList = []
 # window
 window = Tk()
 window.title('')
-window.geometry('380x420')
+window.geometry('380x500')
 window.resizable(False, False)
 window.configure(bg='black')
 
@@ -97,7 +97,7 @@ for i in range(7):
         txt = 'custom'
     var = StringVar(window)
     cb = Checkbutton(window, text=txt, variable=var, width=7, font=('Helvetica',10,'bold'), bd=5, bg='black', fg='white', activebackground='black', activeforeground='white', selectcolor='black')
-    cb.pack(pady=2)
+    cb.pack(pady=3)
     checkbuttonList.append(cb)
     varList.append(var)
 startButton = Button(window, command=start, text='START', width=19, bg='black', fg='white', activebackground='black', activeforeground='white', font=('Helvetica',15,'bold'))
